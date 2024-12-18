@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans Gabriel R. Pastolero | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+       
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #BCFEFE; 
+            color: #001C44;
+            scroll-behavior: smooth;
+        }
+
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 80px;
+            background-color: #0C5776; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            background-color: #e4e4e4;
+            border-radius: 50%;
+            color: #F8DAD0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #0C5776; 
+            color: #ffffff;
+        }
+
+        
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #F8DAD0, #BCFEFE);
+            text-align: center;
+            color: #001C44;
+            padding: 20px;
+        }
+
+        #home h1 {
+            font-size: 48px;
+            color: #001C44;
+        }
+
+        #home p {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+
+        #home .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #home .social-icons a {
+            color: #0C5776;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        #home .social-icons a:hover {
+            color: #2D99AE;
+        }
+
+        
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            color: #001C44;
+        }
+
+        section:nth-child(odd) {
+            background-color: #F8DAD0; 
+        }
+
+        section:nth-child(even) {
+            background-color: #BCFEFE;
+        }
+
+        section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #001C44;
+        }
+
+        section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #0C5776; 
+        }
+
+        
+        footer {
+            background-color: #001C44; 
+            color: #F8DAD0;
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        footer a {
+            color: #BCFEFE;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #F8DAD0;
+        }
+        
+#about {
+    padding: 80px 20px;
+    background-color: #F8DAD0; 
+    text-align: center;
+    padding-left: 100px; 
+    box-sizing: border-box;
+}
+
+#about .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+#about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+
+#about .about-image {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0C5776; 
+}
+
+
+#about .about-text {
+    max-width: 500px;
+}
+
+#about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0C5776; 
+}
+
+
+#about p {
+    font-size: 18px;
+    color: #2D99AE;
+    line-height: 1.6;
+}
+
+#resume {
+    padding: 80px 20px;
+    background-color: #BCFEFE; 
+    text-align: center;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+#resume h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #001C44; 
+}
+
+#resume p {
+    font-size: 18px;
+    color: #0C5776;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+    align-items: start;
+}
+
+.resume-column {
+    width: 100%;
+}
+
+.resume-column h2 {
+    font-size: 28px;
+    color: #0C5776;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.resume-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.resume-item h3 {
+    font-size: 24px;
+    color: #001C44;
+}
+
+.resume-item p {
+    font-size: 16px;
+    color: #2D99AE;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#home" title="Home">🏠</a>
+        <a href="#about" title="About">👤</a>
+        <a href="#resume" title="Resume">📄</a>
+        <a href="#my-projects" title="Projects">🖼️</a>
+        <a href="#seminars" title="Seminars">📚</a>
+        <a href="#social-media" title="Social Media">📧</a>
+    </div>
+
+    <section id="home">
+        <div>
+            <h1>Personal Website Portfolio</h1>
+            <h3>Hans Gabriel R. Pastolero</h3>
+        </div>
+    </section>
+
+<section id="about">
+    <div class="about-container">
+        <div class="about-content">
+            <img src="img/profile.jpg" alt="Hans Gabriel R. Pastolero" class="about-image">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>Hi, I'm Hans Gabriel R. Pastolero, and I'm based in the scenic town of Calubcub 2nd, San Juan, Batangas. I thrive at the intersection of creativity and passion, balancing my love for online games with an active lifestyle as a badminton enthusiast.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="resume">
+    <h1>Resume</h1>
+    <p>Here’s a summary of my educational background.</p>
+    
+    <div class="resume-grid">
+
+        <div class="resume-column">
+            <h2>Education</h2>
+            <div class="resume-item">
+                <h3>Education</h3>
+      <ul>
+        <li>
+          <strong>Bachelor of Science in Information Technology</strong>  
+          <br> Westmead International School, (2021-2025)
+        </li>
+        <li>
+          <strong>Senior High School (STEM Strand)</strong>  
+          <br> Batangas Eastern Colleges, (2018-2020)
+        </li>
+        <li>
+          <strong>Junior High School</strong>  
+          <br> Calubcub 2nd National Highschool, (2016-2018)
+        </li>
+      </ul>
+    </div>
+        </div>
+
+        <div class="resume-column">
+            <h2>Experience</h2>
+            <div class="resume-item">
+                <h3>Web Developer Intern</h3>
+                <p>ARC System Solution Co., August 2024 - December 2024</p>
+                <p>Develop a website named Luzon Enchanted Getaways that features some of the best tourist spots and destination in Luzon.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="my-projects">
+    <h1>My Projects</h1>
+    <p>Explore some of the amazing projects I've worked on over the years. From web development to interactive designs, these projects showcase my passion and skills in action.</p>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website built to showcase my skills and projects. It features responsive design, interactive elements, and a modern UI.</p>
+                <button class="view-button" onclick="openModal(['img/pw1.png', 'img/pw2.png', 'img/pw3.png', 'img/pw4.png', 'img/pw5.png', 'img/pw6.png'])">View Project</button>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>E-Commerce Store</h3>
+                <p>An online e-commerce store designed with a user-friendly interface. Integrated with secure payment gateways and designed to improve user experience.</p>
+                <button class="view-button" onclick="openModal(['img/ecoms1.png', 'img/ecoms2.png', 'img/ecoms3.png', 'img/ecoms4.png'])">View Project</button>
+            </div>
+        </div>
+    </section>
+    
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content" id="modal-content">
+            <!-- Images will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <style>
+    #my-projects {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #F8DAD0;
+        padding-left: 100px; 
+        box-sizing: border-box;
+    }
+    
+    #my-projects h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #001C44; 
+    }
+    
+    #my-projects p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #0C5776;
+        line-height: 1.6;
+    }
+    
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        justify-items: center;
+        align-items: start;
+    }
+    
+    .project-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .project-card h3 {
+        font-size: 24px;
+        color: #001C44;
+        margin-bottom: 15px;
+    }
+    
+    .project-card p {
+        font-size: 16px;
+        color: #2D99AE; 
+        margin-bottom: 20px;
+    }
+    
+    .view-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .view-button:hover {
+        background-color: #0056b3;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); 
+        backdrop-filter: blur(8px); 
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    .modal-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        max-width: 90%;
+        margin: 20px auto;
+    }
+    
+    .modal img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        border: 5px solid white;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    
+    .modal .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+    }
+    </style>
+    
+    <script>
+    function openModal(images) {
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        modalContent.innerHTML = '';
+    
+        images.forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = 'Project Image';
+            modalContent.appendChild(img);
+        });
+    
+        modal.style.display = 'flex';
+    }
+    
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+    }
+    </script>
+    
+</head>
+<body>
+<section id="seminars">
+    <h1>Seminars</h1>
+    <p>Discover the seminars and workshops I’ve attended to enhance my skills and knowledge. These seminars have allowed me to stay up-to-date with the latest trends in the industry and continuously improve my expertise.</p>
+
+    <div class="seminars-list">
+        <!-- Seminar 1 -->
+        <div class="seminar-card">
+            <h3>Data Biz Conference</h3>
+            <p><strong>Date:</strong> November 9 2024</p>
+            <button class="view-button" onclick="openModal(['img/databiz1.jpg', 'img/databiz2.jpg', 'img/databiz3.jpg', 'img/databiz4.jpg', 'img/databiz5.jpg'])">View</button>
+        </div>
+
+        <!-- Seminar 2 -->
+        <div class="seminar-card">
+            <h3>BITCON</h3>
+            <p><strong>Date:</strong> April 6 2024</p>
+            <button class="view-button" onclick="openModal(['img/bitcon1.jpg', 'img/bitcon2.jpg', 'img/bitcon3.jpg', 'img/bitcon4.jpg'])">View</button>
+        </div>
+
+        <!-- Seminar 3 -->
+        <div class="seminar-card">
+            <h3>Y4IT</h3>
+            <p><strong>Date:</strong> May 3 2024</p>
+            <button class="view-button" onclick="openModal(['img/y4it1.jpg', 'img/y4it2.jpg', 'img/y4it3.jpg', 'img/y4it4.jpg'])">View</button>
+        </div>
+
+        <!-- Seminar 4 -->
+        <div class="seminar-card">
+            <h3>Jarvis</h3>
+            <p><strong>Date:</strong> April 16 2024</p>
+            <button class="view-button" onclick="openModal(['img/jarvis1.jpg', 'img/jarvis2.jpg', 'img/jarvis3.jpg'])">View</button>
+        </div>
+
+        <!-- Seminar 5 -->
+        <div class="seminar-card">
+            <h3>SEBA Business Forum</h3>
+            <p><strong>Date:</strong> April 16 2024</p>
+            <button class="view-button" onclick="openModal(['img/seba1.jpg', 'img/seba2.jpg', 'img/seba3.jpg', 'img/seba4.jpg'])">View</button>
+        </div>
+
+        <!-- Seminar 6 -->
+        <div class="seminar-card">
+            <h3>Subic Field Trip</h3>
+            <p><strong>Date:</strong> April 3-4 2024</p>
+            <button class="view-button" onclick="openModal(['img/subic1.jpg', 'img/subic2.jpg', 'img/subic3.jpg', 'img/subic4.jpg'])">View</button>
+        </div>
+    </div>
+
+    <div class="modal" id="seminarModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content" id="modalContent">
+        </div>
+    </div>
+</section>
+
+<script>
+    function openModal(imageArray) {
+        const modal = document.getElementById("seminarModal");
+        const modalContent = document.getElementById("modalContent");
+
+        modalContent.innerHTML = '';
+
+        imageArray.forEach(imageSrc => {
+            const imgElement = document.createElement("img");
+            imgElement.src = imageSrc;
+            modalContent.appendChild(imgElement);
+        });
+
+        modal.style.display = "flex";
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("seminarModal");
+        modal.style.display = "none";
+    }
+</script>
+
+<style>
+    
+#seminars {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #BCFEFE;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+#seminars h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #001C44;
+}
+
+#seminars p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #0C5776;
+    line-height: 1.6;
+}
+
+
+.seminars-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+    align-items: start;
+}
+
+.seminar-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.seminar-card h3 {
+    font-size: 24px;
+    color: #001C44;
+    margin-bottom: 15px;
+}
+
+.seminar-card p {
+    font-size: 16px;
+    color: #2D99AE;
+    margin-bottom: 20px;
+}
+
+.seminar-card strong {
+    font-weight: bold;
+}
+
+.seminar-link {
+    font-size: 18px;
+    color: #0C5776; 
+    text-decoration: none;
+    background-color: #F8DAD0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.seminar-link:hover {
+    background-color: #0C5776;
+    color: #F8DAD0;
+}
+
+
+</style>
+
+    
+    <section id="social-media">
+    <h1>Social Media</h1>
+    <p>Connect with me on my social platforms to learn more about my work, projects, and stay updated on the latest trends I’m exploring.</p>
+
+    <div class="social-media-links">
+        <!-- Facebook Card -->
+        <div class="social-media-card">
+            <div class="social-media-header">
+                <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 512 512">
+                    <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                </svg>
+                <h3>Facebook</h3>
+            </div>
+            <p>Follow me for updates on my latest projects, personal thoughts, and activities.</p>
+            <a href="https://www.facebook.com/share/1YXbTVw6cM/?mibextid=LQQJ4d" class="social-media-link">Follow on Facebook</a>
+        </div>
+
+        <!-- Instagram Card -->
+        <div class="social-media-card">
+            <div class="social-media-header">
+                <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 448 512">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg>
+                <h3>Instagram</h3>
+            </div>
+            <p>Get a closer look at my personal life, photography, and moments from my travels and projects.</p>
+            <a href="https://www.instagram.com/hnsgbrl?igsh=NTc4MTIwNjQ2YQ==" class="social-media-link">Follow on Instagram</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    #social-media {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #F8DAD0;
+        color: #001C44;
+        padding-left: 100px;
+        box-sizing: border-box;
+    }
+
+    #social-media h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #001C44;
+    }
+
+    #social-media p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #0C5776;
+        line-height: 1.6;
+    }
+
+    .social-media-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        justify-items: center;
+        align-items: start;
+    }
+
+    .social-media-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        max-width: 350px;
+        text-align: left;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .social-media-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-media-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    .social-media-card h3 {
+        font-size: 24px;
+        color: #001C44;
+        margin: 0;
+    }
+
+    .social-media-card p {
+        font-size: 16px;
+        color: #2D99AE;
+        margin-bottom: 20px;
+    }
+
+    .social-media-link {
+        font-size: 18px;
+        color: #0C5776;
+        text-decoration: none;
+        background-color: #F8DAD0;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .social-media-link:hover {
+        background-color: #0C5776;
+        color: #F8DAD0;
+    }
+</style>
+
+    <footer>
+        <p>&copy; 2024 Hans Gabriel R. Pastolero. All Rights Reserved. </p>
+    </footer>
+</body>
+</html>
